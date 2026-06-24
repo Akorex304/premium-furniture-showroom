@@ -1,29 +1,54 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/sections/Header";
+import { Hero } from "@/components/sections/Hero";
+import { Intro } from "@/components/sections/Intro";
+import { Founder } from "@/components/sections/Founder";
+import { Categories } from "@/components/sections/Categories";
+import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { Gallery } from "@/components/sections/Gallery";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { CustomFurniture } from "@/components/sections/CustomFurniture";
+import { Videos } from "@/components/sections/Videos";
+import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/sections/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Eniola Furnitures — 30 Years of Craftsmanship" },
+      {
+        name: "description",
+        content:
+          "Premium bespoke furniture in Ajanla — sofas, wardrobes, doors, dining sets, kitchen cabinets, TV consoles. Custom built for over 30 years.",
+      },
+      { property: "og:title", content: "Eniola Furnitures — Where Experience Meets Excellence" },
+      {
+        property: "og:description",
+        content:
+          "Bespoke furniture for homes, offices, hotels and commercial spaces. Crafted in Ajanla for over 30 years.",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-[var(--color-ivory)]">
+      <Header />
+      <main>
+        <Hero />
+        <Intro />
+        <Founder />
+        <Categories />
+        <FeaturedProjects />
+        <Gallery />
+        <WhyChooseUs />
+        <CustomFurniture />
+        <Videos />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
