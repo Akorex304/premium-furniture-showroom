@@ -1,6 +1,6 @@
 import { Play } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
+
 import { projects } from "@/data/projects";
 
 export function FeaturedProjects() {
