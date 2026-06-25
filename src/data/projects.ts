@@ -1,31 +1,34 @@
+import tvConsole1 from "@/assets/tv-console-1.jpg.asset.json";
+import tvConsole2 from "@/assets/tv-console-2.jpg.asset.json";
+
 export type Project = {
   id: string;
   title: string;
   category: string;
   poster?: string;
-  video?: string; // path under src/assets/videos/
+  image?: string;
+  video?: string;
   comingSoon?: boolean;
 };
 
-// Add new projects here. To wire a video, drop the file into
-// src/assets/videos/ and set `video: "/src/assets/videos/your-file.mp4"`,
-// or upload via the assets pipeline and paste the CDN URL.
+// To wire a video, drop the file under src/assets/videos/ and set
+// `video: "/src/assets/videos/your-file.mp4"`, or upload via lovable-assets.
 export const projects: Project[] = [
   {
-    id: "tv-console-walnut",
-    title: "Walnut Floating TV Console",
+    id: "tv-console-mirror",
+    title: "TV Console with Backlit Mirror",
     category: "TV Consoles",
-    comingSoon: true,
+    image: tvConsole1.url,
   },
   {
-    id: "tv-console-oak",
-    title: "Oak & Brass Media Unit",
+    id: "tv-console-fluted",
+    title: "Fluted Wood Feature TV Wall",
     category: "TV Consoles",
-    comingSoon: true,
+    image: tvConsole2.url,
   },
   {
-    id: "tv-console-suite",
-    title: "Full Living Suite Build",
+    id: "tv-console-more",
+    title: "More Projects Coming Soon",
     category: "TV Consoles",
     comingSoon: true,
   },
