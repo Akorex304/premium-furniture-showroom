@@ -12,7 +12,7 @@ export function Founder() {
   return (
     <section
       id="founder"
-      className="bg-[var(--color-cream)] py-24 md:py-32"
+      className="bg-[var(--color-cream)] py-28 md:py-40"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-10">
         <Reveal className="md:col-span-5">

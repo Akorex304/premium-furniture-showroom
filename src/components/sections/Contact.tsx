@@ -21,7 +21,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-[var(--color-cream)] py-24 md:py-32">
+    <section id="contact" className="bg-[var(--color-cream)] py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <Reveal>
           <SectionHeading
