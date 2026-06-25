@@ -6,7 +6,7 @@ import { primaryWhatsApp } from "@/data/site";
 
 export function Categories() {
   return (
-    <section id="categories" className="bg-[var(--color-ivory)] py-24 md:py-32">
+    <section id="categories" className="bg-[var(--color-ivory)] py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <Reveal>
           <SectionHeading

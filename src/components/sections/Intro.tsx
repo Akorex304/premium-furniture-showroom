@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 export function Intro() {
   return (
-    <section className="border-b border-[var(--color-border)]/60 bg-[var(--color-ivory)] py-24 md:py-32">
+    <section className="border-b border-[var(--color-border)]/60 bg-[var(--color-ivory)] py-28 md:py-40">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:px-10">
         <Reveal className="md:col-span-4">
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[var(--color-clay)]">

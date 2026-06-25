@@ -12,7 +12,7 @@ export function Founder() {
   return (
     <section
       id="founder"
-      className="bg-[var(--color-cream)] py-24 md:py-32"
+      className="bg-[var(--color-cream)] py-28 md:py-40"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-10">
         <Reveal className="md:col-span-5">
@@ -45,13 +45,17 @@ export function Founder() {
             {site.founder.story}
           </p>
 
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-[var(--color-border)] pt-8">
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
             {stats.map((s) => (
-              <div key={s.label}>
-                <div className="font-display text-3xl text-[var(--color-walnut)] md:text-4xl">
+              <div
+                key={s.label}
+                className="flex flex-col items-start border border-[var(--color-border)] bg-[var(--color-ivory)] p-8 transition-colors hover:border-[var(--color-brass)]"
+              >
+                <div className="font-display text-5xl leading-none text-[var(--color-walnut)] md:text-6xl">
                   {s.value}
                 </div>
-                <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-[var(--color-clay)]">
+                <div className="mt-5 h-px w-10 bg-[var(--color-brass)]" />
+                <div className="mt-4 text-[11px] uppercase tracking-[0.22em] text-[var(--color-clay)]">
                   {s.label}
                 </div>
               </div>

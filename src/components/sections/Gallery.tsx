@@ -1,25 +1,33 @@
 import { useMemo, useState } from "react";
+import { ZoomIn } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ImageLightbox } from "@/components/Lightbox";
 import { gallery, galleryCategories } from "@/data/gallery";
 import { cn } from "@/lib/utils";
 
 export function Gallery() {
   const [filter, setFilter] = useState<string>("All");
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const items = useMemo(
     () => (filter === "All" ? gallery : gallery.filter((g) => g.category === filter)),
     [filter],
   );
 
+  const slides = useMemo(
+    () => items.map((g) => ({ src: g.image, alt: g.alt })),
+    [items],
+  );
+
   return (
-    <section id="gallery" className="bg-[var(--color-cream)] py-24 md:py-32">
+    <section id="gallery" className="bg-[var(--color-cream)] py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <Reveal>
           <SectionHeading
             eyebrow="Gallery"
             title="A growing archive of finished work."
-            description="Filter by category as soon as photography is added. The structure is ready — drop new images into the gallery data file at any time."
+            description="Tap any image to view in full screen, zoom into the detail, and swipe through the collection."
           />
         </Reveal>
 
@@ -56,20 +64,38 @@ export function Gallery() {
               </div>
             </Reveal>
           ) : (
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-              {items.map((g) => (
-                <img
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {items.map((g, i) => (
+                <button
                   key={g.id}
-                  src={g.image}
-                  alt={g.alt}
-                  loading="lazy"
-                  className="aspect-square w-full object-cover"
-                />
+                  type="button"
+                  onClick={() => setLightboxIndex(i)}
+                  className="group relative block aspect-[4/5] w-full overflow-hidden bg-[var(--color-ivory)]"
+                  aria-label={`Open ${g.alt} in lightbox`}
+                >
+                  <img
+                    src={g.image}
+                    alt={g.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-espresso)]/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute right-4 top-4 grid h-10 w-10 place-items-center bg-[var(--color-ivory)]/90 text-[var(--color-espresso)] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <ZoomIn className="h-4 w-4" />
+                  </div>
+                </button>
               ))}
             </div>
           )}
         </div>
       </div>
+
+      <ImageLightbox
+        open={lightboxIndex !== null}
+        index={lightboxIndex ?? 0}
+        slides={slides}
+        onClose={() => setLightboxIndex(null)}
+      />
     </section>
   );
 }
