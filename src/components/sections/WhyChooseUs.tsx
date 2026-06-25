@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import interiorBg from "@/assets/interior-bg.jpg.asset.json";
 
 const reasons = [
   { title: "Over 30 Years of Experience", body: "Three decades of design, build and install across homes, offices, schools and hotels." },
@@ -14,7 +15,19 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="bg-[var(--color-ivory)] py-24 md:py-32">
+    <section className="relative isolate overflow-hidden py-28 md:py-40">
+      <img
+        src={interiorBg.url}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--color-ivory)]/95 via-[var(--color-ivory)]/92 to-[var(--color-ivory)]/96"
+      />
+
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <Reveal>
           <SectionHeading
@@ -23,17 +36,17 @@ export function WhyChooseUs() {
           />
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={i * 0.04}>
-              <div className="border-t border-[var(--color-brass)]/60 pt-6">
+              <div className="flex h-full flex-col border border-[var(--color-border)] bg-[var(--color-ivory)]/85 p-7 backdrop-blur-sm transition-colors hover:border-[var(--color-brass)]">
                 <div className="font-display text-3xl text-[var(--color-brass)]">
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="mt-3 font-display text-xl text-[var(--color-espresso)]">
+                <h3 className="mt-4 font-display text-xl text-[var(--color-espresso)]">
                   {r.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted-foreground)]">
+                <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted-foreground)]">
                   {r.body}
                 </p>
               </div>
