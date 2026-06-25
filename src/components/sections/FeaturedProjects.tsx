@@ -28,7 +28,7 @@ export function FeaturedProjects() {
           {projects.map((p, i) => (
             <Reveal key={p.id} delay={i * 0.08}>
               <article className="group relative aspect-[3/4] overflow-hidden border border-[var(--color-ivory)]/10 bg-[var(--color-walnut)]">
-                {p.video && p.poster ? (
+                {p.video ? (
                   <video
                     src={p.video}
                     poster={p.poster}
@@ -36,6 +36,13 @@ export function FeaturedProjects() {
                     loop
                     playsInline
                     className="h-full w-full object-cover"
+                  />
+                ) : p.image ? (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (
                   <div
