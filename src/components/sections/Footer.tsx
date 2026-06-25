@@ -20,7 +20,6 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             <li><a href="#founder" className="hover:text-[var(--color-brass)]">Founder</a></li>
             <li><a href="#categories" className="hover:text-[var(--color-brass)]">Categories</a></li>
-            <li><a href="#projects" className="hover:text-[var(--color-brass)]">Projects</a></li>
             <li><a href="#gallery" className="hover:text-[var(--color-brass)]">Gallery</a></li>
             <li><a href="#videos" className="hover:text-[var(--color-brass)]">Videos</a></li>
           </ul>
