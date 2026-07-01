@@ -26,7 +26,7 @@ export function CustomFurniture() {
             <span className="text-[var(--color-brass)]">We'll build it for you.</span>
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--color-ivory)]/80 md:text-lg">
-            If you don't find exactly what you're looking for in our gallery,
+            If you don't find exactly what you're looking for in our categories,
             contact us. Share your inspiration, preferred design or furniture
             idea, and our experienced craftsmen will create a custom piece
             tailored specifically to your needs.
