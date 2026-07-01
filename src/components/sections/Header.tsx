@@ -6,10 +6,10 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 const links = [
   { href: "#founder", label: "Founder" },
   { href: "#categories", label: "Categories" },
-  { href: "#gallery", label: "Gallery" },
   { href: "#videos", label: "Videos" },
   { href: "#contact", label: "Contact" },
 ];
+
 
 export function Header() {
   const [open, setOpen] = useState(false);

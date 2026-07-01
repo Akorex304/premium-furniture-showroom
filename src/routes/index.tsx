@@ -4,12 +4,12 @@ import { Hero } from "@/components/sections/Hero";
 import { Intro } from "@/components/sections/Intro";
 import { Founder } from "@/components/sections/Founder";
 import { Categories } from "@/components/sections/Categories";
-import { Gallery } from "@/components/sections/Gallery";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { CustomFurniture } from "@/components/sections/CustomFurniture";
 import { Videos } from "@/components/sections/Videos";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,7 +40,6 @@ function Index() {
         <Intro />
         <Founder />
         <Categories />
-        <Gallery />
         <WhyChooseUs />
         <CustomFurniture />
         <Videos />
@@ -50,3 +49,4 @@ function Index() {
     </div>
   );
 }
+
