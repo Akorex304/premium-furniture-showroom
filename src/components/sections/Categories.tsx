@@ -48,10 +48,10 @@ export function Categories() {
                     {c.description}
                   </p>
                   <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-[var(--color-clay)]">
-                    Enquire on WhatsApp
+                    View Collection
                   </div>
                 </div>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>
