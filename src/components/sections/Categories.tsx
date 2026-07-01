@@ -1,8 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { categories } from "@/data/categories";
-import { primaryWhatsApp } from "@/data/site";
+
 
 export function Categories() {
   return (
@@ -19,12 +20,9 @@ export function Categories() {
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((c, i) => (
             <Reveal key={c.slug} delay={i * 0.05}>
-              <a
-                href={`${primaryWhatsApp}?text=${encodeURIComponent(
-                  `Hello Eniola Furnitures, I'm interested in ${c.name}.`,
-                )}`}
-                target="_blank"
-                rel="noreferrer noopener"
+              <Link
+                to="/category/$slug"
+                params={{ slug: c.slug }}
                 className="group flex h-full flex-col border border-[var(--color-border)] bg-[var(--color-card)] transition-colors hover:border-[var(--color-brass)]"
               >
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-[var(--color-cream)]">
@@ -50,10 +48,10 @@ export function Categories() {
                     {c.description}
                   </p>
                   <div className="mt-2 text-[11px] uppercase tracking-[0.22em] text-[var(--color-clay)]">
-                    Enquire on WhatsApp
+                    View Collection
                   </div>
                 </div>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>
