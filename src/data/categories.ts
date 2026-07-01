@@ -1,3 +1,5 @@
+import tvConsole1 from "@/assets/tv-console-1.jpg.asset.json";
+
 export type Category = {
   slug: string;
   name: string;
@@ -15,6 +17,7 @@ export const categories: Category[] = [
     slug: "tv-consoles",
     name: "TV Consoles",
     description: "Bespoke media units that anchor a living space with quiet authority.",
+    image: tvConsole1.url,
   },
   {
     slug: "wardrobes",
