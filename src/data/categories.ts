@@ -46,6 +46,7 @@ export const categories: Category[] = [
     slug: "bedroom-furniture",
     name: "Bedroom Furniture",
     description: "Beds, nightstands and dressers designed as a quiet, considered suite.",
+    image: bedroomCover.url,
   },
   {
     slug: "office-furniture",
