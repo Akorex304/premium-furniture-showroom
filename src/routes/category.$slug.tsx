@@ -60,7 +60,8 @@ export const Route = createFileRoute("/category/$slug")({
 });
 
 function CategoryPage() {
-  const { category } = Route.useLoaderData();
+  const { slug } = Route.useParams();
+  const category = categories.find((c) => c.slug === slug)!;
   const items = projects.filter((p) => p.category === category.name && p.image);
   const [index, setIndex] = useState(-1);
 
