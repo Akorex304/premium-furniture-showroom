@@ -15,6 +15,16 @@ import bedroom15 from "@/assets/bedroom/bedroom-15.jpg.asset.json";
 import bedroom30 from "@/assets/bedroom/bedroom-30.jpg.asset.json";
 import sofa16 from "@/assets/bedroom/bedroom-16.jpg.asset.json";
 import sofa29 from "@/assets/bedroom/bedroom-29.jpg.asset.json";
+import bedroom08 from "@/assets/bedroom/bedroom-08.jpg.asset.json";
+import bedroom09 from "@/assets/bedroom/bedroom-09.jpg.asset.json";
+import bedroom11 from "@/assets/bedroom/bedroom-11.jpg.asset.json";
+import bedroom20 from "@/assets/bedroom/bedroom-20.jpg.asset.json";
+import bedroom22 from "@/assets/bedroom/bedroom-22.jpg.asset.json";
+import bedroom23 from "@/assets/bedroom/bedroom-23.jpg.asset.json";
+import bedroom25 from "@/assets/bedroom/bedroom-25.jpg.asset.json";
+import bedroom26 from "@/assets/bedroom/bedroom-26.jpg.asset.json";
+import bedroom27 from "@/assets/bedroom/bedroom-27.jpg.asset.json";
+import bedroom28 from "@/assets/bedroom/bedroom-28.jpg.asset.json";
 
 export type Project = {
   id: string;
@@ -43,6 +53,16 @@ export const projects: Project[] = [
   { id: "bed-taupe-fluted", title: "Taupe Fluted Panel Bed", category: "Bedroom Furniture", image: bedroom14.url },
   { id: "bed-black-gold", title: "Black & Gold Statement Bed", category: "Bedroom Furniture", image: bedroom15.url },
   { id: "bed-grey-slat-wall", title: "Grey Bed with Slat Feature Wall", category: "Bedroom Furniture", image: bedroom30.url },
+  { id: "bed-grey-classic-nailhead", title: "Grey Classic Bed with Nailhead Trim", category: "Bedroom Furniture", image: bedroom28.url },
+  { id: "bed-dark-grey-panel", title: "Dark Grey Fluted Panel Bed", category: "Bedroom Furniture", image: bedroom22.url },
+  { id: "bed-boucle-cloud", title: "Boucle Cloud Upholstered Bed", category: "Bedroom Furniture", image: bedroom25.url },
+  { id: "bed-boucle-minimal", title: "Minimal Boucle Platform Bed", category: "Bedroom Furniture", image: bedroom23.url },
+  { id: "bed-arched-boucle", title: "Arched Boucle Headboard Bed", category: "Bedroom Furniture", image: bedroom26.url },
+  { id: "bed-charcoal-suite", title: "Charcoal Bed Suite with Ottomans", category: "Bedroom Furniture", image: bedroom11.url },
+  { id: "bed-grey-channel-suite", title: "Grey Channel Bed Suite", category: "Bedroom Furniture", image: bedroom20.url },
+  { id: "bed-grey-marble-suite", title: "Grey Bed with Marble Floor Suite", category: "Bedroom Furniture", image: bedroom27.url },
+  { id: "bed-grey-minimal-headboard", title: "Grey Minimal Split-Headboard Bed", category: "Bedroom Furniture", image: bedroom08.url },
+  { id: "bed-charcoal-platform", title: "Charcoal Low-Profile Platform Bed", category: "Bedroom Furniture", image: bedroom09.url },
 
   { id: "sofa-curved-beige", title: "Curved Beige Velvet Sofa Suite", category: "Sofa Chairs", image: sofa16.url },
   { id: "sofa-gold-accent", title: "Beige Sofa with Gold Trim Detail", category: "Sofa Chairs", image: sofa29.url },
