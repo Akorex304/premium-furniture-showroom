@@ -1,4 +1,6 @@
 import tvConsole1 from "@/assets/tv-console-1.jpg.asset.json";
+import bedroomCover from "@/assets/bedroom/bedroom-13.jpg.asset.json";
+import sofaCover from "@/assets/bedroom/bedroom-16.jpg.asset.json";
 
 export type Category = {
   slug: string;
@@ -12,6 +14,7 @@ export const categories: Category[] = [
     slug: "sofa-chairs",
     name: "Sofa Chairs",
     description: "Luxurious sofa sets and accent chairs upholstered in premium fabrics.",
+    image: sofaCover.url,
   },
   {
     slug: "tv-consoles",
