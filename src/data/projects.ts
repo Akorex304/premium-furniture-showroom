@@ -25,6 +25,16 @@ import bedroom25 from "@/assets/bedroom/bedroom-25.jpg.asset.json";
 import bedroom26 from "@/assets/bedroom/bedroom-26.jpg.asset.json";
 import bedroom27 from "@/assets/bedroom/bedroom-27.jpg.asset.json";
 import bedroom28 from "@/assets/bedroom/bedroom-28.jpg.asset.json";
+import bedroomWa33 from "@/assets/bedroom/bedroom-wa33.jpg.asset.json";
+import bedroomWa36 from "@/assets/bedroom/bedroom-wa36.jpg.asset.json";
+import bedroomWa37 from "@/assets/bedroom/bedroom-wa37.jpg.asset.json";
+import bedroomWa38 from "@/assets/bedroom/bedroom-wa38.jpg.asset.json";
+import bedroomWa39 from "@/assets/bedroom/bedroom-wa39.jpg.asset.json";
+import bedroomWa40 from "@/assets/bedroom/bedroom-wa40.jpg.asset.json";
+import bedroomWa41 from "@/assets/bedroom/bedroom-wa41.jpg.asset.json";
+import bedroomWa42 from "@/assets/bedroom/bedroom-wa42.jpg.asset.json";
+import bedroomWa43 from "@/assets/bedroom/bedroom-wa43.jpg.asset.json";
+import bedroomWa44 from "@/assets/bedroom/bedroom-wa44.jpg.asset.json";
 
 export type Project = {
   id: string;
