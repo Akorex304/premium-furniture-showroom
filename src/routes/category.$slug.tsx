@@ -7,14 +7,16 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Image as ImageIcon, Video as VideoIcon, Play } from "lucide-react";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { categories } from "@/data/categories";
 import { projects } from "@/data/projects";
+import { videos } from "@/data/videos";
 
 export const Route = createFileRoute("/category/$slug")({
   head: ({ params }) => {
