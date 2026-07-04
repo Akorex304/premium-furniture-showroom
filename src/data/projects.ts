@@ -35,6 +35,16 @@ import bedroomWa41 from "@/assets/bedroom/bedroom-wa41.jpg.asset.json";
 import bedroomWa42 from "@/assets/bedroom/bedroom-wa42.jpg.asset.json";
 import bedroomWa43 from "@/assets/bedroom/bedroom-wa43.jpg.asset.json";
 import bedroomWa44 from "@/assets/bedroom/bedroom-wa44.jpg.asset.json";
+import bedroomWa82 from "@/assets/bedroom/bedroom-wa082.jpg.asset.json";
+import bedroomWa96 from "@/assets/bedroom/bedroom-wa096.jpg.asset.json";
+import bedroomWa108 from "@/assets/bedroom/bedroom-wa108.jpg.asset.json";
+import bedroomWa134 from "@/assets/bedroom/bedroom-wa134.jpg.asset.json";
+import bedroomWa145 from "@/assets/bedroom/bedroom-wa145.jpg.asset.json";
+import bedroomWa146 from "@/assets/bedroom/bedroom-wa146.jpg.asset.json";
+import bedroomWa152 from "@/assets/bedroom/bedroom-wa152.jpg.asset.json";
+import bedroomWa159 from "@/assets/bedroom/bedroom-wa159.jpg.asset.json";
+import bedroomWa161 from "@/assets/bedroom/bedroom-wa161.jpg.asset.json";
+import bedroomWa166 from "@/assets/bedroom/bedroom-wa166.jpg.asset.json";
 
 export type Project = {
   id: string;
@@ -83,6 +93,16 @@ export const projects: Project[] = [
   { id: "bed-wa42-taupe-gold", title: "Taupe Panelled Bed with Gold Inlay", category: "Bedroom Furniture", image: bedroomWa42.url },
   { id: "bed-wa43-mahogany", title: "Mahogany High-Gloss Storage Bed", category: "Bedroom Furniture", image: bedroomWa43.url },
   { id: "bed-wa44-teal-velvet", title: "Teal Velvet Panelled Feature Bed", category: "Bedroom Furniture", image: bedroomWa44.url },
+  { id: "bed-wa82-black-channel", title: "Black Channel-Tufted Bed with Ottoman", category: "Bedroom Furniture", image: bedroomWa82.url },
+  { id: "bed-wa96-mustard-marble", title: "Mustard Velvet Bed with Marble Feature Wall", category: "Bedroom Furniture", image: bedroomWa96.url },
+  { id: "bed-wa108-timber-white", title: "Timber & White Gloss Panel Bed", category: "Bedroom Furniture", image: bedroomWa108.url },
+  { id: "bed-wa134-mustard-stone", title: "Mustard Headboard with Stone Feature Wall", category: "Bedroom Furniture", image: bedroomWa134.url },
+  { id: "bed-wa145-grey-geometric", title: "Grey Geometric Panelled Feature Wall Bed", category: "Bedroom Furniture", image: bedroomWa145.url },
+  { id: "bed-wa146-marble-scallop", title: "Black Marble Wall with Scallop Headboard", category: "Bedroom Furniture", image: bedroomWa146.url },
+  { id: "bed-wa152-grey-slat", title: "Grey Bed with Timber Slat Wall", category: "Bedroom Furniture", image: bedroomWa152.url },
+  { id: "bed-wa159-cream-gold-diamond", title: "Cream & Gold Diamond Panel Bed", category: "Bedroom Furniture", image: bedroomWa159.url },
+  { id: "bed-wa161-ivory-gold-luxury", title: "Ivory & Gold Luxury Suite with Coffered Ceiling", category: "Bedroom Furniture", image: bedroomWa161.url },
+  { id: "bed-wa166-walnut-stripe", title: "Walnut Headboard with Chrome Stripe Detail", category: "Bedroom Furniture", image: bedroomWa166.url },
 
   { id: "sofa-curved-beige", title: "Curved Beige Velvet Sofa Suite", category: "Sofa Chairs", image: sofa16.url },
   { id: "sofa-gold-accent", title: "Beige Sofa with Gold Trim Detail", category: "Sofa Chairs", image: sofa29.url },
