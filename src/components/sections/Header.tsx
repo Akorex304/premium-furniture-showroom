@@ -6,7 +6,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 const links = [
   { href: "#founder", label: "Founder" },
   { href: "#categories", label: "Categories" },
-  { href: "#videos", label: "Videos" },
+  
   { href: "#contact", label: "Contact" },
 ];
 

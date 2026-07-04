@@ -6,7 +6,7 @@ import { Founder } from "@/components/sections/Founder";
 import { Categories } from "@/components/sections/Categories";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { CustomFurniture } from "@/components/sections/CustomFurniture";
-import { Videos } from "@/components/sections/Videos";
+
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 
@@ -42,7 +42,7 @@ function Index() {
         <Categories />
         <WhyChooseUs />
         <CustomFurniture />
-        <Videos />
+        
         <Contact />
       </main>
       <Footer />
