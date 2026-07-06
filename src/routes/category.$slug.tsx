@@ -7,7 +7,7 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
-import { ArrowLeft, Image as ImageIcon, Video as VideoIcon, Play } from "lucide-react";
+import { ArrowLeft, Image as ImageIcon, Video as VideoIcon, Play, MessageCircle } from "lucide-react";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -17,6 +17,11 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { categories } from "@/data/categories";
 import { projects } from "@/data/projects";
 import { videos } from "@/data/videos";
+import { primaryWhatsApp } from "@/data/site";
+
+function buildEnquiryUrl(message: string) {
+  return `${primaryWhatsApp}?text=${encodeURIComponent(message)}`;
+}
 
 export const Route = createFileRoute("/category/$slug")({
   head: ({ params }) => {
