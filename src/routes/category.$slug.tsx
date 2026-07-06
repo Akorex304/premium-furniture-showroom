@@ -200,10 +200,20 @@ function CategoryPage() {
                                   className="h-full w-full object-cover"
                                 />
                               </div>
-                              <figcaption className="mt-4">
+                              <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-3">
                                 <h3 className="font-display text-xl text-[var(--color-espresso)]">
                                   {v.title}
                                 </h3>
+                                <a
+                                  href={buildEnquiryUrl(
+                                    `Hello Eniola Furnitures, I'd like to enquire about the "${v.title}" (${category.name} — Video, ref: ${v.id}).`,
+                                  )}
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                  className="inline-flex items-center gap-2 border border-[var(--color-walnut)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[var(--color-walnut)] transition-colors hover:bg-[var(--color-walnut)] hover:text-[var(--color-ivory)]"
+                                >
+                                  <MessageCircle className="h-3.5 w-3.5" /> Make an Enquiry
+                                </a>
                               </figcaption>
                             </figure>
                           </Reveal>
