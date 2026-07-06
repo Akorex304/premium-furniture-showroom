@@ -119,22 +119,24 @@ function CategoryPage() {
             ) : (
               <>
                 <Tabs defaultValue="images" className="w-full">
-                  <TabsList className="mx-auto mb-10 grid h-auto w-full max-w-md grid-cols-2 gap-1 rounded-full border border-[var(--color-border)]/60 bg-[var(--color-cream)]/60 p-1">
-                    <TabsTrigger
-                      value="images"
-                      className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
-                    >
-                      <ImageIcon className="h-4 w-4" /> Images
-                      <span className="ml-1 text-[10px] opacity-70">({items.length})</span>
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="videos"
-                      className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
-                    >
-                      <VideoIcon className="h-4 w-4" /> Videos
-                      <span className="ml-1 text-[10px] opacity-70">({categoryVideos.length})</span>
-                    </TabsTrigger>
-                  </TabsList>
+                  <div className="sticky top-[64px] z-30 -mx-5 mb-10 border-b border-[var(--color-border)]/60 bg-[var(--color-ivory)]/90 px-5 py-3 backdrop-blur-md md:top-[72px] md:-mx-10 md:px-10">
+                    <TabsList className="mx-auto grid h-auto w-full max-w-md grid-cols-2 gap-1 rounded-full border border-[var(--color-border)]/60 bg-[var(--color-cream)]/60 p-1">
+                      <TabsTrigger
+                        value="images"
+                        className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
+                      >
+                        <ImageIcon className="h-4 w-4" /> Images
+                        <span className="ml-1 text-[10px] opacity-70">({items.length})</span>
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="videos"
+                        className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
+                      >
+                        <VideoIcon className="h-4 w-4" /> Videos
+                        <span className="ml-1 text-[10px] opacity-70">({categoryVideos.length})</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  </div>
 
                   <TabsContent value="images">
                     {items.length === 0 ? (
