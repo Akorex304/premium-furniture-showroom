@@ -110,3 +110,11 @@ const rawProjects = [
   { id: "sofa-curved-beige", title: "Curved Beige Velvet Sofa Suite", category: "Sofa Chairs", image: sofa16.url },
   { id: "sofa-gold-accent", title: "Beige Sofa with Gold Trim Detail", category: "Sofa Chairs", image: sofa29.url },
 ];
+
+export const projects: Project[] = assignRefIds(rawProjects, "image");
+
+export function findByRefId(refId: string): Project | undefined {
+  const q = refId.trim().toUpperCase();
+  return projects.find((p) => p.refId === q);
+}
+
