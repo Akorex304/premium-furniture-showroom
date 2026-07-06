@@ -46,6 +46,8 @@ import bedroomWa159 from "@/assets/bedroom/bedroom-wa159.jpg.asset.json";
 import bedroomWa161 from "@/assets/bedroom/bedroom-wa161.jpg.asset.json";
 import bedroomWa166 from "@/assets/bedroom/bedroom-wa166.jpg.asset.json";
 
+import { assignRefIds } from "./refIds";
+
 export type Project = {
   id: string;
   title: string;
@@ -54,9 +56,10 @@ export type Project = {
   image?: string;
   video?: string;
   comingSoon?: boolean;
+  refId: string;
 };
 
-export const projects: Project[] = [
+const rawProjects = [
   { id: "tv-console-mirror", title: "TV Console with Backlit Mirror", category: "TV Consoles", image: tvConsole1.url },
   { id: "tv-console-fluted", title: "Fluted Wood Feature TV Wall", category: "TV Consoles", image: tvConsole2.url },
   { id: "tv-console-brick", title: "Brick Accent TV Console", category: "TV Consoles", image: tvConsole3.url },
