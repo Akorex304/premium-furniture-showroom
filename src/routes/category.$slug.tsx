@@ -250,6 +250,25 @@ function CategoryPage() {
           slides={slides}
           plugins={[Zoom, Thumbnails, Counter]}
           zoom={{ maxZoomPixelRatio: 4, scrollToZoom: true }}
+          render={{
+            slideFooter: ({ slide }) => {
+              const title = (slide as { title?: string }).title ?? category.name;
+              return (
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[9999] flex justify-center pb-6">
+                  <a
+                    href={buildEnquiryUrl(
+                      `Hello Eniola Furnitures, I'd like to enquire about the "${title}" (${category.name}).`,
+                    )}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="pointer-events-auto inline-flex items-center gap-2 bg-[var(--color-walnut)] px-5 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-ivory)] shadow-lg transition-colors hover:bg-[var(--color-espresso)]"
+                  >
+                    <MessageCircle className="h-4 w-4" /> Make an Enquiry
+                  </a>
+                </div>
+              );
+            },
+          }}
         />
       </main>
       <Footer />
