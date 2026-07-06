@@ -7,7 +7,7 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
-import { ArrowLeft, Image as ImageIcon, Video as VideoIcon, Play } from "lucide-react";
+import { ArrowLeft, Image as ImageIcon, Video as VideoIcon, Play, MessageCircle } from "lucide-react";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -17,6 +17,11 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { categories } from "@/data/categories";
 import { projects } from "@/data/projects";
 import { videos } from "@/data/videos";
+import { primaryWhatsApp } from "@/data/site";
+
+function buildEnquiryUrl(message: string) {
+  return `${primaryWhatsApp}?text=${encodeURIComponent(message)}`;
+}
 
 export const Route = createFileRoute("/category/$slug")({
   head: ({ params }) => {
@@ -114,22 +119,24 @@ function CategoryPage() {
             ) : (
               <>
                 <Tabs defaultValue="images" className="w-full">
-                  <TabsList className="mx-auto mb-10 grid h-auto w-full max-w-md grid-cols-2 gap-1 rounded-full border border-[var(--color-border)]/60 bg-[var(--color-cream)]/60 p-1">
-                    <TabsTrigger
-                      value="images"
-                      className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
-                    >
-                      <ImageIcon className="h-4 w-4" /> Images
-                      <span className="ml-1 text-[10px] opacity-70">({items.length})</span>
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="videos"
-                      className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
-                    >
-                      <VideoIcon className="h-4 w-4" /> Videos
-                      <span className="ml-1 text-[10px] opacity-70">({categoryVideos.length})</span>
-                    </TabsTrigger>
-                  </TabsList>
+                  <div className="sticky top-[64px] z-30 -mx-5 mb-10 border-b border-[var(--color-border)]/60 bg-[var(--color-ivory)]/90 px-5 py-3 backdrop-blur-md md:top-[72px] md:-mx-10 md:px-10">
+                    <TabsList className="mx-auto grid h-auto w-full max-w-md grid-cols-2 gap-1 rounded-full border border-[var(--color-border)]/60 bg-[var(--color-cream)]/60 p-1">
+                      <TabsTrigger
+                        value="images"
+                        className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
+                      >
+                        <ImageIcon className="h-4 w-4" /> Images
+                        <span className="ml-1 text-[10px] opacity-70">({items.length})</span>
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="videos"
+                        className="flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-walnut)] data-[state=active]:bg-[var(--color-espresso)] data-[state=active]:text-[var(--color-ivory)] data-[state=active]:shadow-none"
+                      >
+                        <VideoIcon className="h-4 w-4" /> Videos
+                        <span className="ml-1 text-[10px] opacity-70">({categoryVideos.length})</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  </div>
 
                   <TabsContent value="images">
                     {items.length === 0 ? (
@@ -193,10 +200,20 @@ function CategoryPage() {
                                   className="h-full w-full object-cover"
                                 />
                               </div>
-                              <figcaption className="mt-4">
+                              <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-3">
                                 <h3 className="font-display text-xl text-[var(--color-espresso)]">
                                   {v.title}
                                 </h3>
+                                <a
+                                  href={buildEnquiryUrl(
+                                    `Hello Eniola Furnitures, I'd like to enquire about the "${v.title}" (${category.name} — Video, ref: ${v.id}).`,
+                                  )}
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                  className="inline-flex items-center gap-2 border border-[var(--color-walnut)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[var(--color-walnut)] transition-colors hover:bg-[var(--color-walnut)] hover:text-[var(--color-ivory)]"
+                                >
+                                  <MessageCircle className="h-3.5 w-3.5" /> Make an Enquiry
+                                </a>
                               </figcaption>
                             </figure>
                           </Reveal>
@@ -233,6 +250,25 @@ function CategoryPage() {
           slides={slides}
           plugins={[Zoom, Thumbnails, Counter]}
           zoom={{ maxZoomPixelRatio: 4, scrollToZoom: true }}
+          render={{
+            slideFooter: ({ slide }) => {
+              const title = (slide as { title?: string }).title ?? category.name;
+              return (
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[9999] flex justify-center pb-6">
+                  <a
+                    href={buildEnquiryUrl(
+                      `Hello Eniola Furnitures, I'd like to enquire about the "${title}" (${category.name}).`,
+                    )}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="pointer-events-auto inline-flex items-center gap-2 bg-[var(--color-walnut)] px-5 py-2.5 text-xs uppercase tracking-[0.22em] text-[var(--color-ivory)] shadow-lg transition-colors hover:bg-[var(--color-espresso)]"
+                  >
+                    <MessageCircle className="h-4 w-4" /> Make an Enquiry
+                  </a>
+                </div>
+              );
+            },
+          }}
         />
       </main>
       <Footer />
