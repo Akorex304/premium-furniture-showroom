@@ -20,6 +20,15 @@ import tvcWa22 from "@/assets/tv-consoles/tvc-WA0022.jpg.asset.json";
 import tvcWa23 from "@/assets/tv-consoles/tvc-WA0023.jpg.asset.json";
 import tvcWa24 from "@/assets/tv-consoles/tvc-WA0024.jpg.asset.json";
 import tvcWa35 from "@/assets/tv-consoles/tvc-WA0035.jpg.asset.json";
+import tvcWa37 from "@/assets/tv-consoles/tvc-WA0037.jpg.asset.json";
+import door60 from "@/assets/doors/door-WA0060.jpg.asset.json";
+import door61 from "@/assets/doors/door-WA0061.jpg.asset.json";
+import door64 from "@/assets/doors/door-WA0064.jpg.asset.json";
+import door66 from "@/assets/doors/door-WA0066.jpg.asset.json";
+import door67 from "@/assets/doors/door-WA0067.jpg.asset.json";
+import door68 from "@/assets/doors/door-WA0068.jpg.asset.json";
+import door69 from "@/assets/doors/door-WA0069.jpg.asset.json";
+import door70 from "@/assets/doors/door-WA0070.jpg.asset.json";
 import bedroom5 from "@/assets/bedroom/bedroom-5.jpg.asset.json";
 import bedroom6 from "@/assets/bedroom/bedroom-6.jpg.asset.json";
 import bedroom10 from "@/assets/bedroom/bedroom-10.jpg.asset.json";
@@ -97,6 +106,16 @@ const rawProjects = [
   { id: "tv-console-wa23-walnut-white-floating", title: "Walnut Panel with White Floating Console", category: "TV Consoles", image: tvcWa23.url },
   { id: "tv-console-wa24-walnut-panel", title: "Warm Walnut Panel TV Wall", category: "TV Consoles", image: tvcWa24.url },
   { id: "tv-console-wa35-marble-fireplace", title: "Marble TV Wall with Backlit Fireplace", category: "TV Consoles", image: tvcWa35.url },
+  { id: "tv-console-wa37-gloss-slat", title: "White Gloss TV Panel with Charcoal Slat Wall", category: "TV Consoles", image: tvcWa37.url },
+
+  { id: "door-wa60-black-chrome-stripe", title: "Black Door with Chrome Stripe Detail", category: "Doors", image: door60.url },
+  { id: "door-wa61-frame-install", title: "Hardwood Door Frame Installation", category: "Doors", image: door61.url },
+  { id: "door-wa64-walnut-chrome", title: "Walnut Door with Twin Chrome Inlay", category: "Doors", image: door64.url },
+  { id: "door-wa66-black-satin-nickel", title: "Matte Black Door with Satin Nickel Handle", category: "Doors", image: door66.url },
+  { id: "door-wa67-walnut-gloss", title: "High-Gloss Walnut Panel Door", category: "Doors", image: door67.url },
+  { id: "door-wa68-walnut-chrome-stripes", title: "Walnut Door with Quad Chrome Stripes", category: "Doors", image: door68.url },
+  { id: "door-wa69-stone-marble", title: "Stone-Effect Marble Feature Door", category: "Doors", image: door69.url },
+  { id: "door-wa70-black-minimal", title: "Minimal Matte Black Interior Door", category: "Doors", image: door70.url },
 
   { id: "bed-channel-grey", title: "Channel-Tufted Grey Upholstered Bed", category: "Bedroom Furniture", image: bedroom5.url },
   { id: "bed-royal-blue", title: "Royal Blue Velvet Panel Bed", category: "Bedroom Furniture", image: bedroom6.url },
