@@ -13,6 +13,13 @@ import tvcWa49 from "@/assets/tv-consoles/tvc-WA0049.jpg.asset.json";
 import tvcWa50 from "@/assets/tv-consoles/tvc-WA0050.jpg.asset.json";
 import tvcWa51 from "@/assets/tv-consoles/tvc-WA0051.jpg.asset.json";
 import tvcWa53 from "@/assets/tv-consoles/tvc-WA0053.jpg.asset.json";
+import tvcWa13 from "@/assets/tv-consoles/tvc-WA0013.jpg.asset.json";
+import tvcWa16 from "@/assets/tv-consoles/tvc-WA0016.jpg.asset.json";
+import tvcWa20 from "@/assets/tv-consoles/tvc-WA0020.jpg.asset.json";
+import tvcWa22 from "@/assets/tv-consoles/tvc-WA0022.jpg.asset.json";
+import tvcWa23 from "@/assets/tv-consoles/tvc-WA0023.jpg.asset.json";
+import tvcWa24 from "@/assets/tv-consoles/tvc-WA0024.jpg.asset.json";
+import tvcWa35 from "@/assets/tv-consoles/tvc-WA0035.jpg.asset.json";
 import bedroom5 from "@/assets/bedroom/bedroom-5.jpg.asset.json";
 import bedroom6 from "@/assets/bedroom/bedroom-6.jpg.asset.json";
 import bedroom10 from "@/assets/bedroom/bedroom-10.jpg.asset.json";
@@ -83,6 +90,13 @@ const rawProjects = [
   { id: "tv-console-wa50-black-slat-gloss", title: "Black Slat Wall with Gloss Panel TV Feature", category: "TV Consoles", image: tvcWa50.url },
   { id: "tv-console-wa51-marble-walnut-suite", title: "Marble & Walnut TV Suite with Display", category: "TV Consoles", image: tvcWa51.url },
   { id: "tv-console-wa53-marble-walnut-luxe", title: "Luxe Marble & Walnut TV Feature Wall", category: "TV Consoles", image: tvcWa53.url },
+  { id: "tv-console-wa13-panel-cove", title: "Ivory Panel TV Wall with Cove Lighting", category: "TV Consoles", image: tvcWa13.url },
+  { id: "tv-console-wa16-gold-lounge", title: "Gold Feature TV Wall with Lounge Suite", category: "TV Consoles", image: tvcWa16.url },
+  { id: "tv-console-wa20-white-floral", title: "White Floating TV Panel on Floral Wall", category: "TV Consoles", image: tvcWa20.url },
+  { id: "tv-console-wa22-walnut-white-panel", title: "Walnut & White Panel TV Unit with Drawers", category: "TV Consoles", image: tvcWa22.url },
+  { id: "tv-console-wa23-walnut-white-floating", title: "Walnut Panel with White Floating Console", category: "TV Consoles", image: tvcWa23.url },
+  { id: "tv-console-wa24-walnut-panel", title: "Warm Walnut Panel TV Wall", category: "TV Consoles", image: tvcWa24.url },
+  { id: "tv-console-wa35-marble-fireplace", title: "Marble TV Wall with Backlit Fireplace", category: "TV Consoles", image: tvcWa35.url },
 
   { id: "bed-channel-grey", title: "Channel-Tufted Grey Upholstered Bed", category: "Bedroom Furniture", image: bedroom5.url },
   { id: "bed-royal-blue", title: "Royal Blue Velvet Panel Bed", category: "Bedroom Furniture", image: bedroom6.url },
