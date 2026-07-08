@@ -4,6 +4,7 @@ import v3 from "@/assets/videos/tv-console-3.mp4.asset.json";
 import v4 from "@/assets/videos/tv-console-4.mp4.asset.json";
 import v20 from "@/assets/videos/tvc-vid-WA0020.mp4.asset.json";
 import v21 from "@/assets/videos/tvc-vid-WA0021.mp4.asset.json";
+import v48 from "@/assets/videos/tvc-vid-WA0048.mp4.asset.json";
 
 import { assignRefIds } from "./refIds";
 
@@ -23,6 +24,7 @@ const rawVideos = [
   { id: "tvc-v4", title: "TV Console — Site Reveal", category: "TV Consoles", src: v4.url },
   { id: "tvc-v-wa20", title: "TV Console — Feature Wall Reveal", category: "TV Consoles", src: v20.url },
   { id: "tvc-v-wa21", title: "TV Console — Room Walkthrough", category: "TV Consoles", src: v21.url },
+  { id: "tvc-v-wa48", title: "TV Console — Gloss Panel Install", category: "TV Consoles", src: v48.url },
 ];
 
 export const videos: Video[] = assignRefIds(rawVideos, "video");
