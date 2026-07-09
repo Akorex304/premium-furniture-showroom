@@ -116,6 +116,11 @@ const rawProjects = [
   { id: "tv-console-wa24-walnut-panel", title: "Warm Walnut Panel TV Wall", category: "TV Consoles", image: tvcWa24.url },
   { id: "tv-console-wa35-marble-fireplace", title: "Marble TV Wall with Backlit Fireplace", category: "TV Consoles", image: tvcWa35.url },
   { id: "tv-console-wa37-gloss-slat", title: "White Gloss TV Panel with Charcoal Slat Wall", category: "TV Consoles", image: tvcWa37.url },
+  { id: "tv-console-wa20b-white-floral", title: "Compact White Floating TV Panel", category: "TV Consoles", image: tvcWa20b.url },
+  { id: "tv-console-wa22b-walnut-white-drawers", title: "Walnut Panel TV Wall with White Drawer Console", category: "TV Consoles", image: tvcWa22b.url },
+  { id: "tv-console-wa23b-walnut-floating-white", title: "Walnut Slat Wall with Floating White Console", category: "TV Consoles", image: tvcWa23b.url },
+  { id: "tv-console-wa24b-walnut-shelf", title: "Walnut TV Wall with Overhead Display Shelf", category: "TV Consoles", image: tvcWa24b.url },
+  { id: "tv-console-wa35b-marble-fireplace-slat", title: "Marble Fireplace TV Wall with Slat Display Towers", category: "TV Consoles", image: tvcWa35b.url },
 
   { id: "door-wa60-black-chrome-stripe", title: "Black Door with Chrome Stripe Detail", category: "Doors", image: door60.url },
   { id: "door-wa61-frame-install", title: "Hardwood Door Frame Installation", category: "Doors", image: door61.url },
