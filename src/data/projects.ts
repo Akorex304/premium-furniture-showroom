@@ -29,6 +29,15 @@ import door67 from "@/assets/doors/door-WA0067.jpg.asset.json";
 import door68 from "@/assets/doors/door-WA0068.jpg.asset.json";
 import door69 from "@/assets/doors/door-WA0069.jpg.asset.json";
 import door70 from "@/assets/doors/door-WA0070.jpg.asset.json";
+import door55 from "@/assets/doors/door-WA0055.jpg.asset.json";
+import door57 from "@/assets/doors/door-WA0057.jpg.asset.json";
+import door58 from "@/assets/doors/door-WA0058.jpg.asset.json";
+import door65 from "@/assets/doors/door-WA0065.jpg.asset.json";
+import tvcWa20b from "@/assets/tv-consoles/tvc-WA0020-2.jpg.asset.json";
+import tvcWa22b from "@/assets/tv-consoles/tvc-WA0022-2.jpg.asset.json";
+import tvcWa23b from "@/assets/tv-consoles/tvc-WA0023-2.jpg.asset.json";
+import tvcWa24b from "@/assets/tv-consoles/tvc-WA0024-2.jpg.asset.json";
+import tvcWa35b from "@/assets/tv-consoles/tvc-WA0035-2.jpg.asset.json";
 import bedroom5 from "@/assets/bedroom/bedroom-5.jpg.asset.json";
 import bedroom6 from "@/assets/bedroom/bedroom-6.jpg.asset.json";
 import bedroom10 from "@/assets/bedroom/bedroom-10.jpg.asset.json";
@@ -107,6 +116,11 @@ const rawProjects = [
   { id: "tv-console-wa24-walnut-panel", title: "Warm Walnut Panel TV Wall", category: "TV Consoles", image: tvcWa24.url },
   { id: "tv-console-wa35-marble-fireplace", title: "Marble TV Wall with Backlit Fireplace", category: "TV Consoles", image: tvcWa35.url },
   { id: "tv-console-wa37-gloss-slat", title: "White Gloss TV Panel with Charcoal Slat Wall", category: "TV Consoles", image: tvcWa37.url },
+  { id: "tv-console-wa20b-white-floral", title: "Compact White Floating TV Panel", category: "TV Consoles", image: tvcWa20b.url },
+  { id: "tv-console-wa22b-walnut-white-drawers", title: "Walnut Panel TV Wall with White Drawer Console", category: "TV Consoles", image: tvcWa22b.url },
+  { id: "tv-console-wa23b-walnut-floating-white", title: "Walnut Slat Wall with Floating White Console", category: "TV Consoles", image: tvcWa23b.url },
+  { id: "tv-console-wa24b-walnut-shelf", title: "Walnut TV Wall with Overhead Display Shelf", category: "TV Consoles", image: tvcWa24b.url },
+  { id: "tv-console-wa35b-marble-fireplace-slat", title: "Marble Fireplace TV Wall with Slat Display Towers", category: "TV Consoles", image: tvcWa35b.url },
 
   { id: "door-wa60-black-chrome-stripe", title: "Black Door with Chrome Stripe Detail", category: "Doors", image: door60.url },
   { id: "door-wa61-frame-install", title: "Hardwood Door Frame Installation", category: "Doors", image: door61.url },
@@ -116,6 +130,10 @@ const rawProjects = [
   { id: "door-wa68-walnut-chrome-stripes", title: "Walnut Door with Quad Chrome Stripes", category: "Doors", image: door68.url },
   { id: "door-wa69-stone-marble", title: "Stone-Effect Marble Feature Door", category: "Doors", image: door69.url },
   { id: "door-wa70-black-minimal", title: "Minimal Matte Black Interior Door", category: "Doors", image: door70.url },
+  { id: "door-wa55-black-chrome-5stripe", title: "Espresso Door with Five Chrome Stripes", category: "Doors", image: door55.url },
+  { id: "door-wa57-geometric-white", title: "White Door with Geometric Black Line Inlay", category: "Doors", image: door57.url },
+  { id: "door-wa58-walnut-twin-chrome", title: "Warm Walnut Door with Twin Chrome Bars", category: "Doors", image: door58.url },
+  { id: "door-wa65-oak-black-grooves", title: "Light Oak Door with Black Groove Detail", category: "Doors", image: door65.url },
 
   { id: "bed-channel-grey", title: "Channel-Tufted Grey Upholstered Bed", category: "Bedroom Furniture", image: bedroom5.url },
   { id: "bed-royal-blue", title: "Royal Blue Velvet Panel Bed", category: "Bedroom Furniture", image: bedroom6.url },
