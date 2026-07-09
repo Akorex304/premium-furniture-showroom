@@ -130,6 +130,10 @@ const rawProjects = [
   { id: "door-wa68-walnut-chrome-stripes", title: "Walnut Door with Quad Chrome Stripes", category: "Doors", image: door68.url },
   { id: "door-wa69-stone-marble", title: "Stone-Effect Marble Feature Door", category: "Doors", image: door69.url },
   { id: "door-wa70-black-minimal", title: "Minimal Matte Black Interior Door", category: "Doors", image: door70.url },
+  { id: "door-wa55-black-chrome-5stripe", title: "Espresso Door with Five Chrome Stripes", category: "Doors", image: door55.url },
+  { id: "door-wa57-geometric-white", title: "White Door with Geometric Black Line Inlay", category: "Doors", image: door57.url },
+  { id: "door-wa58-walnut-twin-chrome", title: "Warm Walnut Door with Twin Chrome Bars", category: "Doors", image: door58.url },
+  { id: "door-wa65-oak-black-grooves", title: "Light Oak Door with Black Groove Detail", category: "Doors", image: door65.url },
 
   { id: "bed-channel-grey", title: "Channel-Tufted Grey Upholstered Bed", category: "Bedroom Furniture", image: bedroom5.url },
   { id: "bed-royal-blue", title: "Royal Blue Velvet Panel Bed", category: "Bedroom Furniture", image: bedroom6.url },
