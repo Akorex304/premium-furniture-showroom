@@ -1,6 +1,7 @@
 import tvConsole1 from "@/assets/tv-console-1.jpg.asset.json";
 import bedroomCover from "@/assets/bedroom/bedroom-13.jpg.asset.json";
 import sofaCover from "@/assets/bedroom/bedroom-16.jpg.asset.json";
+import doorCover from "@/assets/doors/door-WA0065.jpg.asset.json";
 
 export type Category = {
   slug: string;
