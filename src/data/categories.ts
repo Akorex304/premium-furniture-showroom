@@ -32,6 +32,7 @@ export const categories: Category[] = [
     slug: "doors",
     name: "Doors",
     description: "Solid hardwood doors with handcrafted detailing and lasting finishes.",
+    image: doorCover.url,
   },
   {
     slug: "dining-tables",
