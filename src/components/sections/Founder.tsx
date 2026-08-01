@@ -1,4 +1,4 @@
-import founderAsset from "@/assets/founder-portrait.jpg.asset.json";
+import founderAsset from "@/assets/founder-portrait.jpg";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/data/site";
 
@@ -19,7 +19,7 @@ export function Founder() {
           <div className="relative">
             <div className="absolute -left-3 -top-3 hidden h-full w-full border border-[var(--color-brass)]/60 md:block" />
             <img
-              src={founderAsset.url}
+              src={founderAsset}
               alt={`${site.founder.name}, founder of Eniola Furnitures`}
               width={1024}
               height={1280}

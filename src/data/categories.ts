@@ -1,7 +1,7 @@
-import tvConsole1 from "@/assets/tv-console-1.jpg.asset.json";
-import bedroomCover from "@/assets/bedroom/bedroom-13.jpg.asset.json";
-import sofaCover from "@/assets/bedroom/bedroom-16.jpg.asset.json";
-import doorCover from "@/assets/doors/door-WA0065.jpg.asset.json";
+import tvConsole1 from "@/assets/tv-console-1.jpg";
+import bedroomCover from "@/assets/bedroom/bedroom-13.jpg";
+import sofaCover from "@/assets/bedroom/bedroom-16.jpg";
+import doorCover from "@/assets/doors/door-WA0065.jpg";
 
 export type Category = {
   slug: string;
@@ -15,13 +15,13 @@ export const categories: Category[] = [
     slug: "sofa-chairs",
     name: "Sofa Chairs",
     description: "Luxurious sofa sets and accent chairs upholstered in premium fabrics.",
-    image: sofaCover.url,
+    image: sofaCover,
   },
   {
     slug: "tv-consoles",
     name: "TV Consoles",
     description: "Bespoke media units that anchor a living space with quiet authority.",
-    image: tvConsole1.url,
+    image: tvConsole1,
   },
   {
     slug: "wardrobes",
@@ -32,7 +32,7 @@ export const categories: Category[] = [
     slug: "doors",
     name: "Doors",
     description: "Solid hardwood doors with handcrafted detailing and lasting finishes.",
-    image: doorCover.url,
+    image: doorCover,
   },
   {
     slug: "dining-tables",
@@ -48,7 +48,7 @@ export const categories: Category[] = [
     slug: "bedroom-furniture",
     name: "Bedroom Furniture",
     description: "Beds, nightstands and dressers designed as a quiet, considered suite.",
-    image: bedroomCover.url,
+    image: bedroomCover,
   },
   {
     slug: "office-furniture",
