@@ -1,48 +1,47 @@
-# Eniola Furnitures — Premium Showroom Website
+# ZIP Batch Upload Page + Wardrobes & Shoe Rack Category
 
-A single-page premium furniture site for Eniola Furnitures with a warm editorial aesthetic (cream/ivory, deep walnut, brass accents, Cormorant serif + Karla body). Structure is built now; placeholders sit where future photos/videos will go, with clearly labeled drop-in slots so adding media later is trivial.
+## What you'll get
 
-## Design direction
+A private **Upload** page on the website where you drop a single ZIP of folders containing photos and videos. The page unpacks the ZIP, shows you a preview of every file it found with the category it will go into, and then writes those files into the project as real local files in `src/assets/...` — exactly like the media already in the gallery, so everything is committed to the repo and exports to GitHub.
 
-- Palette: ivory `#F7F3EC`, warm cream `#EFE7D8`, deep walnut `#3B2A1E`, espresso `#1C140E`, brass `#B08A4A`, muted clay `#A8704E`.
-- Type: Cormorant Garamond (display, headings) + Karla (body, UI). Loaded via `<link>` in `__root.tsx`; family names declared as `--font-display` / `--font-sans` in `@theme`.
-- Motion: gentle fade/slide-up on scroll, slow hero parallax, image hover zoom — restrained, not flashy. Implemented with Motion (framer-motion).
-- Spacing: generous section padding (py-24 / py-32 md), max-w 6xl/7xl, asymmetric editorial layouts (zigzag for Founder + Custom sections, magazine grid for categories).
+## Important limitation (please read)
 
-## Sections (single page, anchored nav)
+Local project files can only be written while you are working in the Lovable editor/preview. The published live site runs on a serverless host with no writable project folder, so the Upload page will be **available in the editor preview only** and hidden on the published site. That is the only way to satisfy "everything stored locally and exported to GitHub" — a runtime uploader on the live site would have to store files in cloud storage, which never reaches GitHub.
 
-1. **Sticky header** — wordmark "Eniola Furnitures", anchor links (Founder, Categories, Projects, Gallery, Contact), WhatsApp CTA.
-2. **Hero** — full-bleed warm image placeholder, serif headline "Where Experience Meets Excellence", subhead with 30-years line, two CTAs: WhatsApp + Request a Quote.
-3. **Intro** — short editorial paragraph from the business description.
-4. **Meet the Founder** — large portrait slot (placeholder), name "Akorede Eniola", "30+ Years of Craftsmanship", story paragraph, three stat tiles (30+ yrs, 1000+ pieces, custom builds).
-5. **Furniture Categories** — 8 cards in magazine grid: Sofa Chairs, TV Consoles, Wardrobes, Doors, Dining Tables, Kitchen Cabinets, Bedroom Furniture, Office Furniture. Each card uses a typed `CategoryCard` reading from a single `categories.ts` data file — add an `image` field later and the card swaps from placeholder to photo automatically.
-6. **Featured Projects** — premium portfolio strip; renders the TV Console video(s). Data lives in `projects.ts`; empty slots show "Coming soon" tiles for other categories.
-7. **Gallery** — category-filtered grid scaffold reading from `gallery.ts` (empty arrays per category for now); shows tasteful empty state per filter.
-8. **Why Choose Us** — 8 items with serif numerals + brass divider.
-9. **Custom Furniture** — "Don't See Your Style? We'll Build It For You" with the provided copy and a WhatsApp button on a warm clay background block.
-10. **Videos** — dedicated workshop/project video section, currently rendering TV Console video(s) from `videos.ts`.
-11. **Contact** — split layout: left = phone, two WhatsApp numbers, address (No. 9 Liberty Road, Ajanla), business hours placeholder; right = Quote Request form (name, phone, category select, message) — non-functional submit for now (toast confirmation), wired so we can connect Lovable Cloud later.
-12. **Footer** — wordmark, quick links, contact line, "Website Designed & Developed by Akorex Co".
+So the flow is: you open the preview, upload a ZIP, media lands in `src/assets/`, gallery updates, and it ships with your next GitHub push.
 
-## Media drop-in strategy (so you can add later easily)
+## How the upload page works
 
-- `src/data/categories.ts`, `projects.ts`, `gallery.ts`, `videos.ts` are the only files you edit to add media.
-- `src/assets/` holds generated placeholder hero/founder/category images.
-- TV Console video: drop the file under `src/assets/videos/` and reference its path in `videos.ts` and `projects.ts`. If you share the file in the next turn I'll wire it in; otherwise the section ships with a styled placeholder poster + "Video coming soon" state.
+1. Go to `/upload` in the preview.
+2. Drag in one ZIP (or pick it). Any folder depth is fine.
+3. The page reads the ZIP in the browser and lists each media file with:
+   - filename and size
+   - detected category, guessed from the folder name it sits in (e.g. `Wardrobes/`, `Doors/`, `TV Consoles/`, `Beds/`)
+   - a dropdown to correct the category, plus a "set all to…" control
+   - an editable display title (auto-generated from the filename, cleaned up)
+   - a duplicate warning if a file with identical content already exists in the project — those are skipped by default so nothing appears twice
+4. Press **Add to gallery**. Files are written to `src/assets/<category-folder>/`, images kept as-is, oversized videos compressed to stay under the 10 MB per-file repo limit.
+5. Every new item is appended to the existing data files, so each gets a permanent Reference ID (`WRD-014`, `WRD-V003`, `DOR-016`, …) that never shifts for existing pieces.
+6. The category cover image is filled in automatically for any category that doesn't have one yet.
+
+Supported inside the ZIP: JPG, JPEG, PNG, WEBP, MP4, MOV, WEBM. Anything else (including nested ZIPs and system junk like `__MACOSX`, `.DS_Store`) is ignored and reported.
+
+## Wardrobes category rename
+
+The category becomes **Wardrobes and Shoe Rack** — shown on the homepage grid, the category page heading, and the site navigation. The URL stays `/category/wardrobes` and the Reference ID prefix stays `WRD`, so nothing already issued changes.
+
+## Wardrobe media from your PDF
+
+The wardrobe PDF you sent is 25 designs: wardrobes, children's wardrobes, shoe racks, storage cabinets and one storage bed. As part of this work I'll extract those photos into `src/assets/wardrobes/`, drop the duplicated page variants, file the storage bed under Bedroom Furniture, and put everything else (wardrobes, children's wardrobes, shoe racks, storage cabinets) under Wardrobes and Shoe Rack with fresh Ref IDs and clean display names.
 
 ## Technical notes
 
-- Stack as-is: TanStack Start, Tailwind v4, shadcn. Single route `src/routes/index.tsx` with section components under `src/components/sections/`.
-- Tokens added to `src/styles.css` under `:root` + `@theme inline` (no hex in components).
-- `head()` on the index route: title "Eniola Furnitures — 30 Years of Craftsmanship", meta description, OG tags.
-- Phone numbers rendered as `tel:` / `wa.me` links; WhatsApp uses `https://wa.me/2349078236989`.
-- Generated placeholder imagery (warm editorial furniture photography style) for hero + founder + category cards via `imagegen` (fast tier).
-- Mobile-first responsive with the grid + min-w-0 + shrink-0 pattern for header/founder rows.
-
-## Out of scope (this build)
-
-- Backend / form submission persistence (left as a TODO comment + toast).
-- Auth, CMS, payments.
-- Real photos for non-TV-Console categories — placeholders only.
-
-Approve to build.
+- New dep: a browser ZIP reader (`fflate`) for client-side extraction — no server unzip, no cloud storage.
+- New route `src/routes/upload.tsx`, rendered only when `import.meta.env.DEV` is true; on the published build the route renders a short "editor only" notice and is left out of the navigation and sitemap (`robots: noindex`).
+- New server function module `src/lib/media-upload.functions.ts`:
+  - `saveMediaBatch` receives base64 file payloads + category/title metadata, validated with Zod (extension allowlist, size cap, filename sanitising, path-traversal rejection).
+  - Writes with `node:fs/promises` into `src/assets/<folder>/`, hashes content to detect duplicates, and refuses to run unless `process.env.NODE_ENV === 'development'`.
+  - Appends entries to `src/data/projects.ts` / `src/data/videos.ts` by generating a small companion module (`src/data/uploaded-media.ts`) that both files spread in — this avoids rewriting the hand-maintained arrays and keeps Ref ID ordering stable.
+- `src/data/refIds.ts`: add the renamed category label mapping to the existing `WRD` prefix.
+- `src/data/categories.ts`: rename the Wardrobes entry's `name`, keep `slug: "wardrobes"`, add a cover image.
+- No changes to layout, styling, animations, or the existing gallery/enquiry behaviour.
