@@ -47,13 +47,16 @@ export const saveMediaBatch = createServerFn({ method: "POST" })
     // Hash everything already in src/assets so the same photo never appears twice.
     const existingHashes = new Set<string>();
     const walk = async (dir: string): Promise<void> => {
-      let entries: Awaited<ReturnType<typeof fs.readdir>> = [];
+      let entries: { name: string; isDirectory: () => boolean }[] = [];
       try {
-        entries = await fs.readdir(dir, { withFileTypes: true });
+        entries = (await fs.readdir(dir, { withFileTypes: true })) as unknown as {
+          name: string;
+          isDirectory: () => boolean;
+        }[];
       } catch {
         return;
       }
-      for (const entry of entries as unknown as { name: string; isDirectory: () => boolean }[]) {
+      for (const entry of entries) {
         const full = path.join(dir, entry.name);
         if (entry.isDirectory()) {
           await walk(full);
