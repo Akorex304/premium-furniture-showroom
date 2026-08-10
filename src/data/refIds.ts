@@ -8,6 +8,7 @@ export const categoryPrefix: Record<string, string> = {
   "Bedroom Furniture": "BED",
   "Sofa Chairs": "SOF",
   Wardrobes: "WRD",
+  "Wardrobes and Shoe Rack": "WRD",
   Doors: "DOR",
   "Dining Tables": "DIN",
   "Kitchen Cabinets": "KIT",

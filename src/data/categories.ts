@@ -2,6 +2,7 @@ import tvConsole1 from "@/assets/tv-console-1.jpg";
 import bedroomCover from "@/assets/bedroom/bedroom-13.jpg";
 import sofaCover from "@/assets/bedroom/bedroom-16.jpg";
 import doorCover from "@/assets/doors/door-WA0065.jpg";
+import wardrobeCover from "@/assets/wardrobes/wardrobe-12-charcoal-gold-three-section.jpg";
 
 export type Category = {
   slug: string;
@@ -25,8 +26,10 @@ export const categories: Category[] = [
   },
   {
     slug: "wardrobes",
-    name: "Wardrobes",
-    description: "Floor-to-ceiling storage built around your room and your wardrobe.",
+    name: "Wardrobes and Shoe Rack",
+    description:
+      "Floor-to-ceiling wardrobes and shoe racks built around your room and your storage.",
+    image: wardrobeCover,
   },
   {
     slug: "doors",
