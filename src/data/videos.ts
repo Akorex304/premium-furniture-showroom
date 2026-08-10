@@ -7,6 +7,7 @@ import v21 from "@/assets/videos/tvc-vid-WA0021.mp4";
 import v48 from "@/assets/videos/tvc-vid-WA0048.mp4";
 
 import { assignRefIds } from "./refIds";
+import { uploadedVideos } from "./uploaded-media";
 
 export type Video = {
   id: string;
@@ -27,4 +28,4 @@ const rawVideos = [
   { id: "tvc-v-wa48", title: "TV Console — Gloss Panel Install", category: "TV Consoles", src: v48 },
 ];
 
-export const videos: Video[] = assignRefIds(rawVideos, "video");
+export const videos: Video[] = assignRefIds([...rawVideos, ...uploadedVideos], "video");
