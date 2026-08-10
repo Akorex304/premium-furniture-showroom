@@ -1,0 +1,18 @@
+[
+  {
+    "id": "up-test-1",
+    "title": "Test 1",
+    "category": "Kitchen Cabinets",
+    "file": "kitchen/test-1.jpg",
+    "kind": "image",
+    "hash": "0ce664451ea132a1ea698b88e73e929d63efc0c5aac259457454fd7d182ed124"
+  },
+  {
+    "id": "up-test-2",
+    "title": "Test 2",
+    "category": "Kitchen Cabinets",
+    "file": "kitchen/test-2.jpg",
+    "kind": "image",
+    "hash": "51801033ad42f653905d311c87817af8e27d37c06058fd8df18f97ecf33e0dc7"
+  }
+]
