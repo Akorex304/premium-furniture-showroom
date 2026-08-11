@@ -47,6 +47,7 @@ export const categories: Category[] = [
     slug: "kitchen-cabinets",
     name: "Kitchen Cabinets",
     description: "Full kitchen joinery, precision-fitted with premium hardware.",
+    image: kitchenCover,
   },
   {
     slug: "bedroom-furniture",
