@@ -102,6 +102,13 @@ import wardrobe22 from "@/assets/wardrobes/wardrobe-22-timber-open-shelf-drawers
 import wardrobe23 from "@/assets/wardrobes/wardrobe-23-kids-pair.jpg";
 import shoerack24 from "@/assets/wardrobes/shoerack-24-timber-five-shelf.jpg";
 import shoerack25 from "@/assets/wardrobes/shoerack-25-charcoal.jpg";
+import shoerack26 from "@/assets/wardrobes/shoerack-26-timber-six-tier-drawer.jpg";
+import shoerack27 from "@/assets/wardrobes/shoerack-27-grey-oak-display.jpg";
+import wardrobe28 from "@/assets/wardrobes/wardrobe-28-timber-two-section-open.jpg";
+import wardrobe29 from "@/assets/wardrobes/wardrobe-29-white-three-door-drawers.jpg";
+import wardrobe30 from "@/assets/wardrobes/wardrobe-30-kids-pair-white-blue.jpg";
+import wardrobe31 from "@/assets/wardrobes/wardrobe-31-timber-four-door.jpg";
+import wardrobe32 from "@/assets/wardrobes/wardrobe-32-light-oak-three-door.jpg";
 import bedStorageTimber from "@/assets/bedroom/bed-storage-timber-headboard-shelf.jpg";
 
 import { assignRefIds } from "./refIds";
@@ -227,6 +234,13 @@ const rawProjects = [
   { id: "wrd-23-kids-pair", title: "Children's Wardrobe Pair", category: "Wardrobes and Shoe Rack", image: wardrobe23 },
   { id: "wrd-24-shoerack-timber-five-shelf", title: "Timber Five-Shelf Shoe Rack", category: "Wardrobes and Shoe Rack", image: shoerack24 },
   { id: "wrd-25-shoerack-charcoal", title: "Charcoal Shoe Rack", category: "Wardrobes and Shoe Rack", image: shoerack25 },
+  { id: "wrd-26-shoerack-timber-six-tier-drawer", title: "Timber Six-Tier Shoe Rack with Drawer", category: "Wardrobes and Shoe Rack", image: shoerack26 },
+  { id: "wrd-27-shoerack-grey-oak-display", title: "Grey Oak Shoe Rack with Display Top", category: "Wardrobes and Shoe Rack", image: shoerack27 },
+  { id: "wrd-28-timber-two-section-open", title: "Timber Two-Section Wardrobe with Open Shelving", category: "Wardrobes and Shoe Rack", image: wardrobe28 },
+  { id: "wrd-29-white-three-door-drawers", title: "White Three-Door Wardrobe with Side Drawers", category: "Wardrobes and Shoe Rack", image: wardrobe29 },
+  { id: "wrd-30-kids-pair-white-blue", title: "Children's Wardrobe Pair in White & Blue", category: "Wardrobes and Shoe Rack", image: wardrobe30 },
+  { id: "wrd-31-timber-four-door", title: "Timber Four-Door Wardrobe", category: "Wardrobes and Shoe Rack", image: wardrobe31 },
+  { id: "wrd-32-light-oak-three-door", title: "Light Oak Three-Door Wardrobe", category: "Wardrobes and Shoe Rack", image: wardrobe32 },
 
   { id: "bed-storage-timber-headboard-shelf", title: "Timber Storage Bed with Headboard Shelving", category: "Bedroom Furniture", image: bedStorageTimber },
 ];
