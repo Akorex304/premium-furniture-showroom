@@ -3,6 +3,7 @@ import bedroomCover from "@/assets/bedroom/bedroom-13.jpg";
 import sofaCover from "@/assets/bedroom/bedroom-16.jpg";
 import doorCover from "@/assets/doors/door-WA0065.jpg";
 import wardrobeCover from "@/assets/wardrobes/wardrobe-12-charcoal-gold-three-section.jpg";
+import kitchenCover from "@/assets/kitchen/kitchen-cover.jpg";
 
 export type Category = {
   slug: string;
