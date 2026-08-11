@@ -3,6 +3,7 @@ import bedroomCover from "@/assets/bedroom/bedroom-13.jpg";
 import sofaCover from "@/assets/bedroom/bedroom-16.jpg";
 import doorCover from "@/assets/doors/door-WA0065.jpg";
 import wardrobeCover from "@/assets/wardrobes/wardrobe-12-charcoal-gold-three-section.jpg";
+import kitchenCover from "@/assets/kitchen/kitchen-cover.jpg";
 
 export type Category = {
   slug: string;
@@ -46,6 +47,7 @@ export const categories: Category[] = [
     slug: "kitchen-cabinets",
     name: "Kitchen Cabinets",
     description: "Full kitchen joinery, precision-fitted with premium hardware.",
+    image: kitchenCover,
   },
   {
     slug: "bedroom-furniture",
