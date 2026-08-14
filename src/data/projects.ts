@@ -113,6 +113,8 @@ import bedStorageTimber from "@/assets/bedroom/bed-storage-timber-headboard-shel
 
 import { assignRefIds } from "./refIds";
 import { uploadedProjects } from "./uploaded-media";
+import { collectionProjects } from "./collection-projects";
+
 
 export type Project = {
   id: string;
@@ -245,7 +247,11 @@ const rawProjects = [
   { id: "bed-storage-timber-headboard-shelf", title: "Timber Storage Bed with Headboard Shelving", category: "Bedroom Furniture", image: bedStorageTimber },
 ];
 
-export const projects: Project[] = assignRefIds([...rawProjects, ...uploadedProjects], "image");
+export const projects: Project[] = assignRefIds(
+  [...rawProjects, ...uploadedProjects, ...collectionProjects],
+  "image",
+);
+
 
 export function findByRefId(refId: string): Project | undefined {
   const q = refId.trim().toUpperCase();
