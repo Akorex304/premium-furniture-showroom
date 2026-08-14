@@ -113,6 +113,8 @@ import bedStorageTimber from "@/assets/bedroom/bed-storage-timber-headboard-shel
 
 import { assignRefIds } from "./refIds";
 import { uploadedProjects } from "./uploaded-media";
+import { collectionProjects } from "./collection-projects";
+
 
 export type Project = {
   id: string;
