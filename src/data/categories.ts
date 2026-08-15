@@ -4,6 +4,7 @@ import sofaCover from "@/assets/bedroom/bedroom-16.jpg";
 import doorCover from "@/assets/doors/door-WA0065.jpg";
 import wardrobeCover from "@/assets/wardrobes/wardrobe-12-charcoal-gold-three-section.jpg";
 import kitchenCover from "@/assets/kitchen/kitchen-cover.jpg";
+import officeCover from "@/assets/collection/off-gen-001.jpg";
 
 export type Category = {
   slug: string;
@@ -59,5 +60,6 @@ export const categories: Category[] = [
     slug: "office-furniture",
     name: "Office Furniture",
     description: "Executive desks, boardroom tables and workstations for the modern office.",
+    image: officeCover,
   },
 ];
