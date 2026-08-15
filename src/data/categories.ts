@@ -60,5 +60,6 @@ export const categories: Category[] = [
     slug: "office-furniture",
     name: "Office Furniture",
     description: "Executive desks, boardroom tables and workstations for the modern office.",
+    image: officeCover,
   },
 ];
