@@ -20,14 +20,14 @@ import { videos } from "@/data/videos";
 import { primaryWhatsApp } from "@/data/site";
 
 function buildEnquiryUrl(refId: string) {
-  const message = `Hello Eniola Furnitures, I'd like to enquire about this furniture.\n\nReference ID: ${refId}`;
+  const message = `Hello Eniola Furnitures and Interiors, I'd like to enquire about this furniture.\n\nReference ID: ${refId}`;
   return `${primaryWhatsApp}?text=${encodeURIComponent(message)}`;
 }
 
 export const Route = createFileRoute("/category/$slug")({
   head: ({ params }) => {
     const cat = categories.find((c) => c.slug === params.slug);
-    const title = cat ? `${cat.name} — Eniola Furnitures` : "Category — Eniola Furnitures";
+    const title = cat ? `${cat.name} — Eniola Furnitures and Interiors` : "Category — Eniola Furnitures and Interiors";
     const description = cat?.description ?? "Browse our bespoke furniture collection.";
     return {
       meta: [
@@ -102,7 +102,7 @@ function CategoryPage() {
     description: `Reference ID: ${p.refId}`,
   }));
 
-  const enquiryMessage = `Hello Eniola Furnitures, I'd like to make an enquiry about ${category.name}.`;
+  const enquiryMessage = `Hello Eniola Furnitures and Interiors, I'd like to make an enquiry about ${category.name}.`;
 
   const hasContent = allItems.length > 0 || allVideos.length > 0;
 

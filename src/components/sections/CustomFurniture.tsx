@@ -35,7 +35,7 @@ export function CustomFurniture() {
             <WhatsAppButton
               label="Start your custom build"
               className="bg-[var(--color-brass)] text-[var(--color-espresso)] hover:bg-[var(--color-ivory)]"
-              message="Hello Eniola Furnitures, I'd like to discuss a custom build."
+              message="Hello Eniola Furnitures and Interiors, I'd like to discuss a custom build."
             />
           </div>
         </Reveal>
