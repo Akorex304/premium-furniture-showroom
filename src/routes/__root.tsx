@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Eniola Furnitures — 30 Years of Craftsmanship" },
+      { title: "Eniola Furnitures and Interiors — 30 Years of Craftsmanship" },
       {
         name: "description",
         content:
-          "Eniola Furnitures crafts bespoke sofas, wardrobes, doors, dining sets, kitchen cabinets and TV consoles. Over 30 years of premium, custom furniture in Ajanla.",
+          "Eniola Furnitures and Interiors crafts bespoke sofas, wardrobes, doors, dining sets, kitchen cabinets and TV consoles. Over 30 years of premium, custom furniture in Ajanla.",
       },
-      { name: "author", content: "Eniola Furnitures" },
-      { property: "og:title", content: "Eniola Furnitures — 30 Years of Craftsmanship" },
+      { name: "author", content: "Eniola Furnitures and Interiors" },
+      { property: "og:title", content: "Eniola Furnitures and Interiors — 30 Years of Craftsmanship" },
       {
         property: "og:description",
         content:

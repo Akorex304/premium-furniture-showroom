@@ -16,14 +16,14 @@ import { saveMediaBatch } from "@/lib/media-upload.functions";
 export const Route = createFileRoute("/upload")({
   head: () => ({
     meta: [
-      { title: "Upload Media — Eniola Furnitures Studio Tools" },
+      { title: "Upload Media — Eniola Furnitures and Interiors Studio Tools" },
       {
         name: "description",
         content:
-          "Internal studio tool for adding furniture photos and videos to the Eniola Furnitures gallery.",
+          "Internal studio tool for adding furniture photos and videos to the Eniola Furnitures and Interiors gallery.",
       },
       { name: "robots", content: "noindex, nofollow" },
-      { property: "og:title", content: "Upload Media — Eniola Furnitures Studio Tools" },
+      { property: "og:title", content: "Upload Media — Eniola Furnitures and Interiors Studio Tools" },
       {
         property: "og:description",
         content: "Internal studio tool for adding gallery photos and videos.",

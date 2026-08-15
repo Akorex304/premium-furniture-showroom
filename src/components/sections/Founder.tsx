@@ -20,7 +20,7 @@ export function Founder() {
             <div className="absolute -left-3 -top-3 hidden h-full w-full border border-[var(--color-brass)]/60 md:block" />
             <img
               src={founderAsset}
-              alt={`${site.founder.name}, founder of Eniola Furnitures`}
+              alt={`${site.founder.name}, founder of Eniola Furnitures and Interiors`}
               width={1024}
               height={1280}
               loading="lazy"

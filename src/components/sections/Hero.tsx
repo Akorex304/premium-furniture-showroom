@@ -9,7 +9,7 @@ export function Hero() {
       <div className="relative h-[88vh] min-h-[640px] w-full">
         <motion.img
           src={heroImg}
-          alt="Eniola Furnitures luxury living room showcase"
+          alt="Eniola Furnitures and Interiors luxury living room showcase"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
@@ -28,7 +28,7 @@ export function Hero() {
           >
             <div className="mb-6 flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-[var(--color-ivory)]/80">
               <span className="h-px w-10 bg-[var(--color-brass)]" />
-              <span>Eniola Furnitures · Since 1995</span>
+              <span>Eniola Furnitures and Interiors · Since 1995</span>
             </div>
             <h1 className="font-display text-5xl leading-[0.98] sm:text-6xl md:text-7xl lg:text-8xl">
               {site.tagline}
@@ -42,7 +42,7 @@ export function Hero() {
               <WhatsAppButton
                 label="Chat on WhatsApp"
                 className="bg-[var(--color-brass)] text-[var(--color-espresso)] hover:bg-[var(--color-ivory)]"
-                message="Hello Eniola Furnitures, I'd like to enquire about a piece."
+                message="Hello Eniola Furnitures and Interiors, I'd like to enquire about a piece."
               />
               <a
                 href="#contact"

@@ -14,13 +14,13 @@ import { Footer } from "@/components/sections/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Eniola Furnitures — 30 Years of Craftsmanship" },
+      { title: "Eniola Furnitures and Interiors — 30 Years of Craftsmanship" },
       {
         name: "description",
         content:
           "Premium bespoke furniture in Ajanla — sofas, wardrobes, doors, dining sets, kitchen cabinets, TV consoles. Custom built for over 30 years.",
       },
-      { property: "og:title", content: "Eniola Furnitures — Where Experience Meets Excellence" },
+      { property: "og:title", content: "Eniola Furnitures and Interiors — Where Experience Meets Excellence" },
       {
         property: "og:description",
         content:
