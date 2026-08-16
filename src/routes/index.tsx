@@ -9,6 +9,8 @@ import { CustomFurniture } from "@/components/sections/CustomFurniture";
 
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
+import { CategoryCta } from "@/components/CategoryCta";
+
 
 
 export const Route = createFileRoute("/")({
@@ -44,6 +46,7 @@ function Index() {
         <CustomFurniture />
         
         <Contact />
+        <CategoryCta />
       </main>
       <Footer />
     </div>
