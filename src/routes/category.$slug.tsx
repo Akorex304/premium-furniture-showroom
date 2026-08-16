@@ -13,6 +13,8 @@ import { Footer } from "@/components/sections/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
+import { CategoryCta } from "@/components/CategoryCta";
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { categories } from "@/data/categories";
 import { projects, findByRefId } from "@/data/projects";
@@ -341,6 +343,9 @@ function CategoryPage() {
             )}
           </div>
         </section>
+
+        <CategoryCta categoryName={category.name} />
+
 
         <Lightbox
           open={index >= 0}
